@@ -7,12 +7,10 @@ modId="armorers_bane"
 version="1.0.0"
 displayName="Armorer's Bane"
 credits="Made using MCreator."
-displayURL="https://mcreator.net"
 logoFile="logo.png"
 authors="JMPotionwiz"
 description='''
-A small mod that debuffs constantly wearing armor
-'''
+A small mod that debuffs constantly wearing armor'''
 
 [[dependencies.armorers_bane]]
     modId="minecraft"
