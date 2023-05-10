@@ -1,0 +1,8 @@
+{
+  "enchantment.armorers_bane.weightiness_curse": "Curse of Weightiness",
+  "gamerule.armorersBaneFoodDrain": "Food Drain",
+  "gamerule.armorersBaneFoodDrain.description": "Whether wearing armor should cause the player\u0027s hunger to deplete faster",
+  "gamerule.armorersBaneWearAndTear.description": "Whether armor should degrade slowly when worn",
+  "gamerule.armorersBaneWearAndTear": "Wear and Tear",
+  "enchantment.armorers_bane.weightless": "Weightless"
+}
