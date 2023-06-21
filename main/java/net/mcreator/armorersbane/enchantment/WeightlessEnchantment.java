@@ -20,7 +20,7 @@ public class WeightlessEnchantment extends Enchantment {
 
 	@Override
 	protected boolean checkCompatibility(Enchantment ench) {
-		return !List.of(Enchantments.UNBREAKING).contains(ench);
+		return this != ench && !List.of(Enchantments.UNBREAKING).contains(ench);
 	}
 
 	@Override

@@ -51,46 +51,46 @@ public class ArmorersBaneTickProcedure {
 				totalD = 0;
 				itemsEquiped = 0;
 				armorIndex = 0;
-				for (int index0 = 0; index0 < (int) (4); index0++) {
-					if (!((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY).getItem() == (ItemStack.EMPTY).getItem())) {
-						D = D + ((((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)).isDamageableItem()
-								? ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)).getMaxDamage()
+				for (int index0 = 0; index0 < 4; index0++) {
+					if (!((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY).getItem() == ItemStack.EMPTY.getItem())) {
+						D = D + (((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY).isDamageableItem()
+								? (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY).getMaxDamage()
 								: 32)
-								- (((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)).isDamageableItem()
-										? ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)).getDamageValue()
+								- ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY).isDamageableItem()
+										? (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY).getDamageValue()
 										: 0))
 								* Math.pow(0.5,
 										((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)
 												.is(ItemTags.create(new ResourceLocation("armorers_bane:lightweight"))) ? 1 : 0)
-												+ EnchantmentHelper.getItemEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTLESS.get(),
-														(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)))
-								* Math.max(EnchantmentHelper.getItemEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTINESS_CURSE.get(),
-										(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)) + 1, 1)
-								* (((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)).isEnchanted()
+												+ (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)
+														.getEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTLESS.get()))
+								* Math.max((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)
+										.getEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTINESS_CURSE.get()) + 1, 1)
+								* ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY).isEnchanted()
 										&& !(EnchantmentHelper.getItemEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTLESS.get(),
 												(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)) != 0) ? 1.25 : 1);
-						totalD = totalD + (((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)).isDamageableItem()
-								? ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)).getMaxDamage()
+						totalD = totalD + ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY).isDamageableItem()
+								? (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY).getMaxDamage()
 								: 32)
 								* Math.pow(0.5,
 										((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)
 												.is(ItemTags.create(new ResourceLocation("armorers_bane:lightweight"))) ? 1 : 0)
-												+ EnchantmentHelper.getItemEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTLESS.get(),
-														(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)))
-								* Math.max(EnchantmentHelper.getItemEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTINESS_CURSE.get(),
-										(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)) + 1, 1)
-								* (((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)).isEnchanted()
+												+ (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)
+														.getEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTLESS.get()))
+								* Math.max((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)
+										.getEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTINESS_CURSE.get()) + 1, 1)
+								* ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY).isEnchanted()
 										&& !(EnchantmentHelper.getItemEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTLESS.get(),
 												(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)) != 0) ? 1.25 : 1);
 						itemsEquiped = itemsEquiped + 1
 								* Math.pow(0.5,
 										((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)
 												.is(ItemTags.create(new ResourceLocation("armorers_bane:lightweight"))) ? 1 : 0)
-												+ EnchantmentHelper.getItemEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTLESS.get(),
-														(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)))
-								* Math.max(EnchantmentHelper.getItemEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTINESS_CURSE.get(),
-										(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)) + 1, 1)
-								* (((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)).isEnchanted()
+												+ (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)
+														.getEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTLESS.get()))
+								* Math.max((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)
+										.getEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTINESS_CURSE.get()) + 1, 1)
+								* ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY).isEnchanted()
 										&& !(EnchantmentHelper.getItemEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTLESS.get(),
 												(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)) != 0) ? 1.25 : 1);
 					}
@@ -105,11 +105,11 @@ public class ArmorersBaneTickProcedure {
 			if (!world.isClientSide()) {
 				armorIndex = 0;
 				D = 15;
-				for (int index1 = 0; index1 < (int) (4); index1++) {
-					if (!((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY).getItem() == (ItemStack.EMPTY).getItem())) {
-						for (int index2 = 0; index2 < (int) (Math.floor(V / D)); index2++) {
-							if (((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)).getDamageValue()
-									+ 1 < ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)).getMaxDamage()) {
+				for (int index1 = 0; index1 < 4; index1++) {
+					if (!((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY).getItem() == ItemStack.EMPTY.getItem())) {
+						for (int index2 = 0; index2 < (int) Math.floor(V / D); index2++) {
+							if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY).getDamageValue()
+									+ 1 < (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY).getMaxDamage()) {
 								{
 									ItemStack _ist = (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY);
 									if (_ist.hurt(1, RandomSource.create(), null)) {
@@ -120,8 +120,8 @@ public class ArmorersBaneTickProcedure {
 							}
 						}
 						if (V / D - Math.floor(V / D) > Math.random()) {
-							if (((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)).getDamageValue()
-									+ 1 < ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY)).getMaxDamage()) {
+							if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY).getDamageValue()
+									+ 1 < (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY).getMaxDamage()) {
 								{
 									ItemStack _ist = (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.byTypeAndIndex(EquipmentSlot.Type.ARMOR, (int) armorIndex)) : ItemStack.EMPTY);
 									if (_ist.hurt(1, RandomSource.create(), null)) {
