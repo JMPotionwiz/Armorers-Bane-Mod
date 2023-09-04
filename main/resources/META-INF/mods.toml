@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[45,)"
+loaderVersion="[47,)"
 license="MIT License"
 
 [[mods]]
@@ -7,7 +7,7 @@ modId="armorers_bane"
 version="1.0.0"
 displayName="Armorer's Bane"
 credits="Made using MCreator."
-displayURL="https://mcreator.net"
+displayURL="https://modrinth.com/mod/armorers-bane"
 logoFile="logo.png"
 authors="JMPotionwiz"
 description="A small mod that debuffs constantly wearing armor"
@@ -15,7 +15,7 @@ description="A small mod that debuffs constantly wearing armor"
 [[dependencies.armorers_bane]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.4]"
+    versionRange="[1.20.1]"
     ordering="NONE"
     side="BOTH"
 

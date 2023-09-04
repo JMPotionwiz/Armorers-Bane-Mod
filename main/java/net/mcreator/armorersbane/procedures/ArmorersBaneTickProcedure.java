@@ -27,7 +27,7 @@ public class ArmorersBaneTickProcedure {
 	@SubscribeEvent
 	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
 		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.player.level, event.player);
+			execute(event, event.player.level(), event.player);
 		}
 	}
 
@@ -45,7 +45,7 @@ public class ArmorersBaneTickProcedure {
 		double itemsEquiped = 0;
 		double V = 0;
 		V = entity.walkDist - (entity.getCapability(ArmorersBaneModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ArmorersBaneModVariables.PlayerVariables())).walkDistPrev;
-		if (world.getLevelData().getGameRules().getBoolean(ArmorersBaneModGameRules.ARMORERSBANEFOODDRAIN) && entity.isOnGround() && !(entity.isInWaterOrBubble() || (entity instanceof Player _plr ? _plr.getAbilities().instabuild : false))) {
+		if (world.getLevelData().getGameRules().getBoolean(ArmorersBaneModGameRules.ARMORERSBANEFOODDRAIN) && entity.onGround() && !(entity.isInWaterOrBubble() || (entity instanceof Player _plr ? _plr.getAbilities().instabuild : false))) {
 			if (!world.isClientSide()) {
 				D = 0;
 				totalD = 0;
@@ -101,7 +101,7 @@ public class ArmorersBaneTickProcedure {
 					_player.causeFoodExhaustion((float) (V * armorExhaustion));
 			}
 		}
-		if (world.getLevelData().getGameRules().getBoolean(ArmorersBaneModGameRules.ARMORERSBANEWEARANDTEAR) && (entity.isOnGround() || entity.isInWaterOrBubble()) && !(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
+		if (world.getLevelData().getGameRules().getBoolean(ArmorersBaneModGameRules.ARMORERSBANEWEARANDTEAR) && (entity.onGround() || entity.isInWaterOrBubble()) && !(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
 			if (!world.isClientSide()) {
 				armorIndex = 0;
 				D = 15;
