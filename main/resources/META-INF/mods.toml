@@ -4,13 +4,13 @@ license="MIT License"
 
 [[mods]]
 modId="armorers_bane"
-version="1.0.0"
+version="1.1.0"
 displayName="Armorer's Bane"
 credits="Made using MCreator."
 displayURL="https://modrinth.com/mod/armorers-bane"
 logoFile="logo.png"
 authors="JMPotionwiz"
-description="A small mod that debuffs constantly wearing armor"
+description="A small mod that debuffs constantly wearing armor (and holding shields)"
 
 [[dependencies.armorers_bane]]
     modId="minecraft"

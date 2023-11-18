@@ -96,6 +96,56 @@ public class ArmorersBaneTickProcedure {
 					}
 					armorIndex = armorIndex + 1;
 				}
+				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("armorers_bane:heavy_handhelds")))) {
+					D = D + (((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).isDamageableItem() ? (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getMaxDamage() : 32)
+							- ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).isDamageableItem() ? (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getDamageValue() : 0))
+							* Math.pow(0.5,
+									((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("armorers_bane:lightweight"))) ? 1 : 0)
+											+ (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTLESS.get()))
+							* Math.max((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTINESS_CURSE.get()) + 1, 1)
+							* ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).isEnchanted()
+									&& !(EnchantmentHelper.getItemEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTLESS.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0) ? 1.25 : 1);
+					totalD = totalD
+							+ ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).isDamageableItem() ? (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getMaxDamage() : 32)
+									* Math.pow(0.5,
+											((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("armorers_bane:lightweight"))) ? 1 : 0)
+													+ (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTLESS.get()))
+									* Math.max((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTINESS_CURSE.get()) + 1, 1)
+									* ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).isEnchanted()
+											&& !(EnchantmentHelper.getItemEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTLESS.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0) ? 1.25 : 1);
+					itemsEquiped = itemsEquiped + 1
+							* Math.pow(0.5,
+									((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("armorers_bane:lightweight"))) ? 1 : 0)
+											+ (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTLESS.get()))
+							* Math.max((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTINESS_CURSE.get()) + 1, 1)
+							* ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).isEnchanted()
+									&& !(EnchantmentHelper.getItemEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTLESS.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0) ? 1.25 : 1);
+				}
+				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("armorers_bane:heavy_handhelds")))) {
+					D = D + (((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).isDamageableItem() ? (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getMaxDamage() : 32)
+							- ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).isDamageableItem() ? (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getDamageValue() : 0))
+							* Math.pow(0.5,
+									((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("armorers_bane:lightweight"))) ? 1 : 0)
+											+ (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTLESS.get()))
+							* Math.max((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTINESS_CURSE.get()) + 1, 1)
+							* ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).isEnchanted()
+									&& !(EnchantmentHelper.getItemEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTLESS.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)) != 0) ? 1.25 : 1);
+					totalD = totalD
+							+ ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).isDamageableItem() ? (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getMaxDamage() : 32)
+									* Math.pow(0.5,
+											((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("armorers_bane:lightweight"))) ? 1 : 0)
+													+ (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTLESS.get()))
+									* Math.max((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTINESS_CURSE.get()) + 1, 1)
+									* ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).isEnchanted()
+											&& !(EnchantmentHelper.getItemEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTLESS.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)) != 0) ? 1.25 : 1);
+					itemsEquiped = itemsEquiped + 1
+							* Math.pow(0.5,
+									((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("armorers_bane:lightweight"))) ? 1 : 0)
+											+ (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTLESS.get()))
+							* Math.max((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTINESS_CURSE.get()) + 1, 1)
+							* ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).isEnchanted()
+									&& !(EnchantmentHelper.getItemEnchantmentLevel(ArmorersBaneModEnchantments.WEIGHTLESS.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)) != 0) ? 1.25 : 1);
+				}
 				armorExhaustion = ((totalD * 0.5 * (D / Math.max(totalD, 1)) + totalD * 0.5) * 0.05 + (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) * 2 + itemsEquiped) * 0.002;
 				if (entity instanceof Player _player)
 					_player.causeFoodExhaustion((float) (V * armorExhaustion));
